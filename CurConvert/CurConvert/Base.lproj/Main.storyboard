@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -14,13 +19,86 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EaC-hD-rb5">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="l9D-Bz-PBg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wSE-Dr-oAg"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6TW-Oe-Cc6">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="E7K-f6-ycm"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Currency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iy-z9-KxM">
+                                <rect key="frame" x="16" y="71" width="108" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHy-4X-o9b">
+                                <rect key="frame" x="171.5" y="66" width="31" height="30"/>
+                                <state key="normal" title="USD"/>
+                                <connections>
+                                    <action selector="selectCurrencyBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fpA-ot-3TW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9e-yQ-Ctp">
+                                <rect key="frame" x="295" y="66" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xgj-1c-PKg"/>
+                                </connections>
+                            </button>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DxE-ux-H9u">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="q5b-QT-8t8"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fid-F1-ntL"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="EaC-hD-rb5" secondAttribute="trailing" constant="-16" id="5bg-2D-zQc"/>
+                            <constraint firstItem="6TW-Oe-Cc6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="5uY-hN-r64"/>
+                            <constraint firstItem="EaC-hD-rb5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="6dx-rK-Jxb"/>
+                            <constraint firstItem="EaC-hD-rb5" firstAttribute="top" secondItem="nHy-4X-o9b" secondAttribute="bottom" constant="4" id="HIo-rI-4ci"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="6TW-Oe-Cc6" secondAttribute="leading" id="PFN-an-auO"/>
+                            <constraint firstItem="DxE-ux-H9u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="bYe-G9-3SM"/>
+                            <constraint firstItem="nHy-4X-o9b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cq5-oc-hQt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6TW-Oe-Cc6" secondAttribute="trailing" id="dkT-F9-8CF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DxE-ux-H9u" secondAttribute="trailing" constant="-16" id="fAI-Yv-tpa"/>
+                            <constraint firstItem="d9e-yQ-Ctp" firstAttribute="top" secondItem="6TW-Oe-Cc6" secondAttribute="bottom" constant="8" id="h6a-Nr-Hdo"/>
+                            <constraint firstItem="nHy-4X-o9b" firstAttribute="top" secondItem="6TW-Oe-Cc6" secondAttribute="bottom" constant="8" id="joz-gG-Lyp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EaC-hD-rb5" secondAttribute="bottom" id="pC2-YH-n6L"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="9iy-z9-KxM" secondAttribute="leading" id="u66-Wd-Arc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d9e-yQ-Ctp" secondAttribute="trailing" id="wF7-rx-Hlo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DxE-ux-H9u" secondAttribute="bottom" id="wJI-j6-DCG"/>
+                            <constraint firstItem="9iy-z9-KxM" firstAttribute="top" secondItem="6TW-Oe-Cc6" secondAttribute="bottom" constant="13" id="ztN-Po-HuF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountField" destination="6TW-Oe-Cc6" id="xRu-Sd-eTG"/>
+                        <outlet property="calculateBtn" destination="d9e-yQ-Ctp" id="tNW-QX-r5V"/>
+                        <outlet property="currencyPickerView" destination="DxE-ux-H9u" id="38R-ek-aak"/>
+                        <outlet property="exchangeRateTableView" destination="EaC-hD-rb5" id="4jv-cS-3y4"/>
+                        <outlet property="selectCurrencyBtn" destination="nHy-4X-o9b" id="4Kf-mp-S5P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="325.60000000000002" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

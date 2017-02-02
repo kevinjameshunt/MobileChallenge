@@ -15,8 +15,11 @@
 		046AC8A61E41A3A400811809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046AC8A51E41A3A400811809 /* Assets.xcassets */; };
 		046AC8A91E41A3A400811809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046AC8A71E41A3A400811809 /* LaunchScreen.storyboard */; };
 		046AC8B31E41A43D00811809 /* CCDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AC8B21E41A43D00811809 /* CCDataManager.m */; };
-		046AC8B61E41A47B00811809 /* CCRateObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AC8B51E41A47B00811809 /* CCRateObjectFactory.m */; };
-		046AC8B91E41A48900811809 /* CCRateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AC8B81E41A48900811809 /* CCRateObject.m */; };
+		046AC8DB1E41A64B00811809 /* CCRatesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AC8DA1E41A64B00811809 /* CCRatesObject.m */; };
+		046AC8E01E41A93000811809 /* CurrencyRates+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AC8DD1E41A93000811809 /* CurrencyRates+CoreDataProperties.m */; };
+		046AC8E11E41A93000811809 /* CurrencyRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AC8DF1E41A93000811809 /* CurrencyRates.m */; };
+		046AC9051E41BE6900811809 /* CCExchangeRateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AC9041E41BE6900811809 /* CCExchangeRateManager.m */; };
+		046AC9091E41C53000811809 /* CCExchangeRateConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AC9081E41C53000811809 /* CCExchangeRateConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +36,16 @@
 		046AC8AA1E41A3A400811809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046AC8B11E41A43D00811809 /* CCDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDataManager.h; path = CurrencyData/CCDataManager.h; sourceTree = "<group>"; };
 		046AC8B21E41A43D00811809 /* CCDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDataManager.m; path = CurrencyData/CCDataManager.m; sourceTree = "<group>"; };
-		046AC8B41E41A47B00811809 /* CCRateObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCRateObjectFactory.h; path = CurrencyData/CCRateObjectFactory.h; sourceTree = "<group>"; };
-		046AC8B51E41A47B00811809 /* CCRateObjectFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCRateObjectFactory.m; path = CurrencyData/CCRateObjectFactory.m; sourceTree = "<group>"; };
-		046AC8B71E41A48900811809 /* CCRateObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRateObject.h; sourceTree = "<group>"; };
-		046AC8B81E41A48900811809 /* CCRateObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRateObject.m; sourceTree = "<group>"; };
+		046AC8D91E41A64B00811809 /* CCRatesObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCRatesObject.h; path = CurrencyData/CCRatesObject.h; sourceTree = "<group>"; };
+		046AC8DA1E41A64B00811809 /* CCRatesObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCRatesObject.m; path = CurrencyData/CCRatesObject.m; sourceTree = "<group>"; };
+		046AC8DC1E41A93000811809 /* CurrencyRates+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CurrencyRates+CoreDataProperties.h"; path = "CurrencyData/CoreDataObjects/CurrencyRates+CoreDataProperties.h"; sourceTree = "<group>"; };
+		046AC8DD1E41A93000811809 /* CurrencyRates+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CurrencyRates+CoreDataProperties.m"; path = "CurrencyData/CoreDataObjects/CurrencyRates+CoreDataProperties.m"; sourceTree = "<group>"; };
+		046AC8DE1E41A93000811809 /* CurrencyRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrencyRates.h; path = CurrencyData/CoreDataObjects/CurrencyRates.h; sourceTree = "<group>"; };
+		046AC8DF1E41A93000811809 /* CurrencyRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrencyRates.m; path = CurrencyData/CoreDataObjects/CurrencyRates.m; sourceTree = "<group>"; };
+		046AC9031E41BE6900811809 /* CCExchangeRateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCExchangeRateManager.h; path = CurrencyData/CCExchangeRateManager.h; sourceTree = "<group>"; };
+		046AC9041E41BE6900811809 /* CCExchangeRateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCExchangeRateManager.m; path = CurrencyData/CCExchangeRateManager.m; sourceTree = "<group>"; };
+		046AC9071E41C53000811809 /* CCExchangeRateConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCExchangeRateConstants.h; sourceTree = "<group>"; };
+		046AC9081E41C53000811809 /* CCExchangeRateConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCExchangeRateConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +78,13 @@
 		046AC8951E41A3A300811809 /* CurConvert */ = {
 			isa = PBXGroup;
 			children = (
+				046AC9071E41C53000811809 /* CCExchangeRateConstants.h */,
+				046AC9081E41C53000811809 /* CCExchangeRateConstants.m */,
 				046AC8B01E41A3FF00811809 /* CurrencyData */,
-				046AC8991E41A3A300811809 /* AppDelegate.h */,
-				046AC89A1E41A3A300811809 /* AppDelegate.m */,
 				046AC89C1E41A3A300811809 /* CCMainViewController.h */,
 				046AC89D1E41A3A300811809 /* CCMainViewController.m */,
+				046AC8991E41A3A300811809 /* AppDelegate.h */,
+				046AC89A1E41A3A300811809 /* AppDelegate.m */,
 				046AC89F1E41A3A300811809 /* Main.storyboard */,
 				046AC8A51E41A3A400811809 /* Assets.xcassets */,
 				046AC8A71E41A3A400811809 /* LaunchScreen.storyboard */,
@@ -95,14 +106,26 @@
 		046AC8B01E41A3FF00811809 /* CurrencyData */ = {
 			isa = PBXGroup;
 			children = (
+				046AC8D81E41A61300811809 /* CoreDataObjects */,
 				046AC8B11E41A43D00811809 /* CCDataManager.h */,
 				046AC8B21E41A43D00811809 /* CCDataManager.m */,
-				046AC8B41E41A47B00811809 /* CCRateObjectFactory.h */,
-				046AC8B51E41A47B00811809 /* CCRateObjectFactory.m */,
-				046AC8B71E41A48900811809 /* CCRateObject.h */,
-				046AC8B81E41A48900811809 /* CCRateObject.m */,
+				046AC8D91E41A64B00811809 /* CCRatesObject.h */,
+				046AC8DA1E41A64B00811809 /* CCRatesObject.m */,
+				046AC9031E41BE6900811809 /* CCExchangeRateManager.h */,
+				046AC9041E41BE6900811809 /* CCExchangeRateManager.m */,
 			);
 			name = CurrencyData;
+			sourceTree = "<group>";
+		};
+		046AC8D81E41A61300811809 /* CoreDataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				046AC8DC1E41A93000811809 /* CurrencyRates+CoreDataProperties.h */,
+				046AC8DD1E41A93000811809 /* CurrencyRates+CoreDataProperties.m */,
+				046AC8DE1E41A93000811809 /* CurrencyRates.h */,
+				046AC8DF1E41A93000811809 /* CurrencyRates.m */,
+			);
+			name = CoreDataObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				046AC89E1E41A3A300811809 /* CCMainViewController.m in Sources */,
-				046AC8B61E41A47B00811809 /* CCRateObjectFactory.m in Sources */,
+				046AC8E01E41A93000811809 /* CurrencyRates+CoreDataProperties.m in Sources */,
+				046AC8E11E41A93000811809 /* CurrencyRates.m in Sources */,
+				046AC9091E41C53000811809 /* CCExchangeRateConstants.m in Sources */,
 				046AC89B1E41A3A300811809 /* AppDelegate.m in Sources */,
-				046AC8B91E41A48900811809 /* CCRateObject.m in Sources */,
+				046AC8DB1E41A64B00811809 /* CCRatesObject.m in Sources */,
+				046AC9051E41BE6900811809 /* CCExchangeRateManager.m in Sources */,
 				046AC8A41E41A3A300811809 /* CurConvert.xcdatamodeld in Sources */,
 				046AC8B31E41A43D00811809 /* CCDataManager.m in Sources */,
 				046AC8981E41A3A300811809 /* main.m in Sources */,
@@ -332,6 +358,7 @@
 				046AC8AF1E41A3A400811809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
